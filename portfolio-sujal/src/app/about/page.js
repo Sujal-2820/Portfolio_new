@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <div className="min-h-screen animate-fadeIn">
+    <div className="min-h-screen animate-fadeIn mt-12"> {/* Add margin-top here */}
       <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <Image
@@ -27,4 +27,3 @@ export default function About() {
     </div>
   )
 }
-

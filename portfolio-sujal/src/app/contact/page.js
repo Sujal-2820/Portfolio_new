@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Linkedin, GitlabIcon as GitHub } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { FaGithubSquare, FaLinkedinIn } from 'react-icons/fa'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -24,7 +25,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen animate-fadeIn">
+    <div className="min-h-screen animate-fadeIn mt-12">
       <h1 className="text-4xl font-bold mb-8 text-center">Contact Me</h1>
       <div className="max-w-2xl mx-auto">
         <div className="flex justify-center space-x-6 mb-8">
@@ -32,10 +33,10 @@ export default function Contact() {
             <Mail size={24} />
           </a>
           <a href="https://www.linkedin.com/in/sujal-soni/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500 transition duration-300">
-            <Linkedin size={24} />
+            <FaLinkedinIn size={24} />
           </a>
           <a href="https://github.com/Sujal-2820" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500 transition duration-300">
-            <GitHub size={24} />
+            <FaGithubSquare size={24} />
           </a>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">

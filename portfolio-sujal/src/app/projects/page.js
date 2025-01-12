@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { ExternalLink } from 'lucide-react'
+import { FaGithub } from 'react-icons/fa'
 
 const projects = [
   {
@@ -27,27 +29,29 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen animate-fadeIn">
-      <h1 className="text-4xl font-bold mb-8 text-center">My Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="min-h-screen bg-gray-50 animate-fadeIn mt-12">
+      <h1 className="text-4xl font-bold text-center text-blue-700 mb-12">My Projects</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {projects.map((project, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+          <div key={index} className="bg-white rounded-xl shadow-2xl overflow-hidden transition-transform duration-300 hover:scale-105 transform hover:shadow-xl">
             <Image
               src={project.image}
               alt={project.title}
-              width={400}
-              height={200}
-              className="w-full h-48 object-cover"
+              width={500}
+              height={300}
+              className="w-full h-60 object-cover rounded-t-xl"
             />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <div className="flex justify-between">
-                <Link href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">
-                  Live Demo
+            <div className="p-6 space-y-4">
+              <h3 className="text-2xl font-semibold text-blue-800">{project.title}</h3>
+              <p className="text-gray-600">{project.description}</p>
+              <div className="flex justify-between items-center">
+                <Link href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-blue-500 hover:text-blue-600 space-x-2">
+                  <ExternalLink size={18} />
+                  <span>Live Demo</span>
                 </Link>
-                <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-600">
-                  GitHub
+                <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-gray-800 space-x-2">
+                  <FaGithub size={18} />
+                  <span>GitHub</span>
                 </Link>
               </div>
             </div>
@@ -57,4 +61,3 @@ export default function Projects() {
     </div>
   )
 }
-
