@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p>&copy; 2024 Sujal Soni. All rights reserved.</p>
+            <p>&copy; 2025 Sujal Soni.</p>
           </div>
           <div className="flex space-x-4">
             <a href="https://www.linkedin.com/in/sujal-soni/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-300">
