@@ -27,7 +27,8 @@ const Navbar = () => {
           <Link href="/" className="text-2xl font-bold text-blue-500">
             Sujal Soni
           </Link>
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex items-center space-x-8">
+            {/* Nav Items */}
             {navItems.map((item) => (
               <motion.div
                 key={item.name}
@@ -45,6 +46,7 @@ const Navbar = () => {
                 </Link>
               </motion.div>
             ))}
+            {/* Resume Button */}
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -60,11 +62,13 @@ const Navbar = () => {
               </a>
             </motion.div>
           </div>
+          {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={toggleMenu}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
+      {/* Mobile Menu */}
       {isOpen && (
         <motion.div 
           className="md:hidden"
