@@ -29,7 +29,7 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <a 
-            href="/resume.pdf" 
+            href="https://drive.google.com/file/d/1_hC__RHC79UgiQS_l2D1M0vLANrExJug/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300"

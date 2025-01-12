@@ -52,7 +52,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
             >
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1_hC__RHC79UgiQS_l2D1M0vLANrExJug/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition duration-300 flex items-center"
@@ -89,7 +89,7 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1_hC__RHC79UgiQS_l2D1M0vLANrExJug/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="block px-3 py-2 text-orange-500 hover:text-orange-600 transition duration-300"
