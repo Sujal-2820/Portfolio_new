@@ -5,25 +5,25 @@ import { FaGithub } from 'react-icons/fa'
 
 const projects = [
   {
-    title: "Event Management Platform",
-    description: "Features seamless event registration with real-time updates using Next.js, Firebase, and MongoDB.",
-    image: "/event-management.jpg",
-    liveLink: "https://eventsphere1.vercel.app/",
-    githubLink: "https://github.com/Sujal-2820/Event-Management-Platform",
+    title: "Mentor Space",
+    description: "Mentorship platform with dashboards, filters, and user feedback. Built with Next.js and Supabase.",
+    image: "/images/mentorSpace.png",
+    liveLink: "https://mentor-space123.vercel.app/",
+    githubLink: "https://github.com/Sujal-2820/MentorSpace",
   },
   {
     title: "Skill Path",
     description: "Personalized learning platform with adaptive learning modules, utilizing Next.js and Firebase.",
-    image: "/skill-path.jpg",
+    image: "/images/skillPath.png",
     liveLink: "https://skill-path.vercel.app/",
     githubLink: "https://github.com/Sujal-2820/SkillPath",
   },
   {
-    title: "Mentor Space",
-    description: "Mentorship platform with dashboards, filters, and user feedback. Built with Next.js and Supabase.",
-    image: "/mentor-space.jpg",
-    liveLink: "https://mentor-space123.vercel.app/",
-    githubLink: "https://github.com/Sujal-2820/MentorSpace",
+    title: "Event Management Platform",
+    description: "Features seamless event registration with real-time updates using Next.js, Firebase, and MongoDB.",
+    image: "/images/eventsphere.png",
+    liveLink: "https://eventsphere1.vercel.app/",
+    githubLink: "https://github.com/Sujal-2820/Event-Management-Platform",
   },
 ]
 

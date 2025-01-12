@@ -13,13 +13,18 @@ export default function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setFormData(prevState => ({ ...prevState, [name]: value }))
+    setFormData((prevState) => ({ ...prevState, [name]: value }))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', formData)
+    
+    // Construct the mailto link
+    const mailtoLink = `mailto:sujal28soni@gmail.com?subject=Message from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0AMessage: ${formData.message}`
+    
+    // Open the mail client
+    window.location.href = mailtoLink
+
     // Reset form after submission
     setFormData({ name: '', email: '', message: '' })
   }
@@ -29,13 +34,26 @@ export default function Contact() {
       <h1 className="text-4xl font-bold mb-8 text-center">Contact Me</h1>
       <div className="max-w-2xl mx-auto">
         <div className="flex justify-center space-x-6 mb-8">
-          <a href="mailto:sujal28soni@gmail.com" className="text-gray-600 hover:text-blue-500 transition duration-300">
+          <a
+            href="mailto:sujal28soni@gmail.com"
+            className="text-gray-600 hover:text-blue-500 transition duration-300"
+          >
             <Mail size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/sujal-soni/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500 transition duration-300">
+          <a
+            href="https://www.linkedin.com/in/sujal-soni/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-blue-500 transition duration-300"
+          >
             <FaLinkedinIn size={24} />
           </a>
-          <a href="https://github.com/Sujal-2820" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-500 transition duration-300">
+          <a
+            href="https://github.com/Sujal-2820"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-blue-500 transition duration-300"
+          >
             <FaGithubSquare size={24} />
           </a>
         </div>
@@ -76,7 +94,10 @@ export default function Contact() {
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
           </div>
-          <button type="submit" className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300"
+          >
             Send Message
           </button>
         </form>
@@ -84,4 +105,3 @@ export default function Contact() {
     </div>
   )
 }
-

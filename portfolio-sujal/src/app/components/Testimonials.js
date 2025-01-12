@@ -5,22 +5,22 @@ import Image from 'next/image'
 
 const testimonials = [
   {
-    name: "John Doe",
-    role: "Project Manager",
-    content: "Sujal is an exceptional developer with a keen eye for detail. His work on our project was outstanding.",
-    image: "/testimonial-1.jpg"
+    name: "Ayush",
+    role: "Founder of Notes-Era",
+    content: "Sujal is an outstanding developer with exceptional attention to detail. His contributions to the foundational code for Notes-Era were flawless.",
+    image: "/images/ayush.png"
   },
   {
-    name: "Jane Smith",
+    name: "Suhani",
     role: "Senior Developer",
-    content: "Working with Sujal was a pleasure. His problem-solving skills and dedication to quality are impressive.",
-    image: "/testimonial-2.jpg"
+    content: "Working alongside Sujal was truly rewarding. His strong problem-solving skills and dedication to quality impressed me greatly. He was always willing to break down complex web concepts that I struggled to grasp.",
+    image: "/images/Suhani.jpeg"
   },
   {
-    name: "Alex Johnson",
+    name: "Karthik",
     role: "UI/UX Designer",
-    content: "Sujal's ability to translate designs into functional, responsive web applications is remarkable.",
-    image: "/testimonial-3.jpg"
+    content: "Sujal excels at transforming designs into functional, intuitive, and responsive web applications, demonstrating remarkable skill and creativity.",
+    image: "/images/karthik.png"
   }
 ]
 
@@ -38,14 +38,16 @@ export default function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Image
-                src={testimonial.image}
-                alt={testimonial.name}
-                width={80}
-                height={80}
-                className="rounded-full mb-4"
-              />
-              <p className="text-gray-600 mb-4 text-center">{testimonial.content}</p>
+              <div className="w-20 h-20 rounded-full overflow-hidden mb-4">
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  width={80}
+                  height={80}
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-gray-600 mb-4 text-center selection:bg-green selection:text-white">{testimonial.content}</p>
               <p className="font-semibold">{testimonial.name}</p>
               <p className="text-sm text-gray-500">{testimonial.role}</p>
             </motion.div>
