@@ -33,7 +33,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <motion.div 
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+              className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:rotate-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -55,4 +55,3 @@ export default function Testimonials() {
     </section>
   )
 }
-
