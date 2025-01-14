@@ -6,7 +6,7 @@ import Image from 'next/image'
 const testimonials = [
   {
     name: "Ayush",
-    role: "Founder of Notes-Era",
+    role: "Founder at Notes-Era",
     content: "Sujal is an outstanding developer with exceptional attention to detail. His contributions to the foundational code for Notes-Era were flawless.",
     image: "/images/ayush.png"
   },
@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     name: "Karthik",
-    role: "UI/UX Designer",
+    role: "Founder at Indo-Tech",
     content: "Sujal excels at transforming designs into functional, intuitive, and responsive web applications, demonstrating remarkable skill and creativity.",
     image: "/images/karthik.png"
   }
